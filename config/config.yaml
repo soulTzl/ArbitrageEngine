@@ -1,0 +1,34 @@
+# Arbitrage Engine Configuration
+
+arbitrage:
+  min_profit_threshold: 10        # Minimum profit in USD
+  max_trade_size: 1000           # Maximum single trade size
+  gas_price_limit: 100           # Maximum gas price in gwei
+  slippage_tolerance: 0.02       # 2% slippage tolerance
+
+amm:
+  uniswap_v2:
+    fee: 0.003
+    router_address: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+
+  sushiswap:
+    fee: 0.003
+    router_address: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F"
+
+  curve:
+    fee: 0.0004
+
+blockchain:
+  network: "mainnet"
+  rpc_url: "https://mainnet.infura.io/v3/YOUR_PROJECT_ID"
+  chain_id: 1
+
+database:
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  database: "arbitrage_db"
+
+logging:
+  level: "INFO"
+  file: "logs/arbitrage.log"
